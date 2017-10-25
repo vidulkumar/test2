@@ -1,13 +1,18 @@
-# Uses python3
-n = int(input())
-a = [int(x) for x in input().split()]
-assert(len(a) == n)
+'''
+Directions before using : Uses python3
+Objective: To find maximum product of possible pairs is requested
+Input Values: array - array from which maximum product of possible pairs is requested
+return value: product of pair with maximum product
+
+'''
+array = [int(x) for x in input().split()]
+
 
 result = 0
 
-for i in range(0, n):
-    for j in range(i+1, n):
-        if a[i]*a[j] > result:
-            result = a[i]*a[j]
+for i in range(0, len(array)):
+    for j in range(i+1, len(array)):
+        if array[i]*array[j] > result:
+            result = array[i]*array[j]
 
 print(result)
